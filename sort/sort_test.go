@@ -55,6 +55,16 @@ func TestMergeSort(t *testing.T) {
 	}
 }
 
+func TestQuickSort(t *testing.T) {
+	nums := randArray(10)
+	t.Log("initial array is", nums)
+	nums = quickSort(nums)
+	t.Log("sorted array is", nums)
+	if !isSortedArray(nums) {
+		t.Error("quick sort test error")
+	}
+}
+
 func isSortedArray(nums []int) bool {
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < nums[i-1] {
