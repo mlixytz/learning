@@ -65,6 +65,46 @@ func TestQuickSort(t *testing.T) {
 	}
 }
 
+func TestHeapSort(t *testing.T) {
+	nums := randArray(10)
+	t.Log("initial array is", nums)
+	nums = heapSort(nums)
+	t.Log("sorted array is", nums)
+	if !isSortedArray(nums) {
+		t.Error("heap sort test error")
+	}
+}
+
+func TestCountingSort(t *testing.T) {
+	nums := randArray(10)
+	t.Log("initial array is", nums)
+	nums = countingSort(nums, 1000)
+	t.Log("sorted array is", nums)
+	if !isSortedArray(nums) {
+		t.Error("counting sort test error")
+	}
+}
+
+func TestRadixSort(t *testing.T) {
+	nums := randArray(10)
+	t.Log("initial array is", nums)
+	nums = radixSort(nums, 3)
+	t.Log("sorted array is", nums)
+	if !isSortedArray(nums) {
+		t.Error("radix sort test error")
+	}
+}
+
+func TestBucketSort(t *testing.T) {
+	nums := randArray(10)
+	t.Log("initial array is", nums)
+	nums = bucketSort(nums)
+	t.Log("sorted array is", nums)
+	if !isSortedArray(nums) {
+		t.Error("bucket sort test error")
+	}
+}
+
 func isSortedArray(nums []int) bool {
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < nums[i-1] {
