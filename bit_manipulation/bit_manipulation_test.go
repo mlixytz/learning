@@ -10,4 +10,9 @@ func TestSolution(t *testing.T) {
 	if isPowerOfFour(10) || !isPowerOfFour(64) {
 		t.Error("test error")
 	}
+
+	if largestPower(10) != 8 || largestPower(6000) != 4096 {
+		t.Error("test error")
+	}
+
 }
