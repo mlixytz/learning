@@ -15,13 +15,13 @@ func largestPower(N int) int {
 
 // 翻转二进制位
 func reverseBits(n uint32) uint32 {
-	var mask, ret uint32 = 1, 0
+	var mask, ret uint32 = 1 << 31, 0
 	for i := 0; i < 32; i++ {
-		ret <<= 1
-		if mask&n != 0 {
-			ret |= 1
+		if n&1 != 0 {
+			ret |= mask
 		}
-		mask <<= 1
+		mask >>= 1
+		n >>= 1
 	}
 	return ret
 }

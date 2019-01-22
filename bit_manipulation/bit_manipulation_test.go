@@ -15,4 +15,8 @@ func TestSolution(t *testing.T) {
 		t.Error("test error")
 	}
 
+	if rangeBitwiseAnd(5, 7) != 4 {
+		t.Error("test error")
+	}
+
 }
