@@ -7,4 +7,8 @@ func TestSolution(t *testing.T) {
 	if result != 2.5 {
 		t.Error("test error")
 	}
+	result1 := findMedianSortedArrays([]int{1, 3}, []int{2})
+	if result1 != 2 {
+		t.Error("test error")
+	}
 }
