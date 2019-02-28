@@ -5,6 +5,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 迭代
 func reverseList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -17,3 +18,20 @@ func reverseList(head *ListNode) *ListNode {
 	}
 	return prev
 }
+
+// 递归
+// func reverseList(head *ListNode) *ListNode {
+// 	if head == nil || head.Next == nil {
+// 		return head
+// 	}
+// 	return reverse(nil, head)
+// }
+
+// func reverse(prev, cur *ListNode) *ListNode {
+// 	next := cur.Next
+// 	cur.Next = prev
+// 	if next != nil {
+// 		return reverse(cur, next)
+// 	}
+// 	return cur
+// }
