@@ -3,7 +3,7 @@ package leetcode450
 import (
 	"testing"
 
-	"github.com/mlixytz/LeetCode-go/utils"
+	"github.com/mlixytz/go-algorithm/leetcode/utils"
 )
 
 func TestSolution(t *testing.T) {

@@ -1,6 +1,9 @@
 package lru
 
-import "container/list"
+import (
+	"container/list"
+	"sync"
+)
 
 /*
    原理：
@@ -12,10 +15,12 @@ import "container/list"
    	使用hash实现O(1)的访问
 */
 
+// Cache 缓存基础结构
 type Cache struct {
 	MaxEntries int                           // 数目限制， 0是无限制
 	ll         *list.List                    // 使用链表保存数据
 	cache      map[interface{}]*list.Element // 使用map查询
+	mutex      sync.RWMutex
 }
 
 // Key 是任何可以比较的值
@@ -38,6 +43,8 @@ func New(maxEntries int) *Cache {
 
 // Add 添加新的值到cache中
 func (c *Cache) Add(key Key, value interface{}) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
 	if c.cache == nil {
 		c.cache = make(map[interface{}]*list.Element)
 		c.ll = list.New()
@@ -59,6 +66,8 @@ func (c *Cache) Add(key Key, value interface{}) {
 
 // Get 从cache中获取数据
 func (c *Cache) Get(key Key) (value interface{}, ok bool) {
+	c.mutex.RLock()
+	defer c.mutex.RUnlock()
 	if c.cache == nil {
 		return
 	}
@@ -71,6 +80,8 @@ func (c *Cache) Get(key Key) (value interface{}, ok bool) {
 
 // Remove 删除指定key的元素
 func (c *Cache) Remove(key Key) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
 	if c.cache == nil {
 		return
 	}

@@ -5,11 +5,10 @@ func heapSort(nums []int) []int {
 	if n < 2 {
 		return nums
 	}
-	i := n
-	for i > 1 {
-		buildMaxHeap(nums[:i])
-		nums[0], nums[i-1] = nums[i-1], nums[0]
-		i--
+	buildMaxHeap(nums)
+	for i := n - 1; i > 0; i-- {
+		nums[0], nums[i] = nums[i], nums[0]
+		maxHeapify(nums[:i], 0)
 	}
 	return nums
 }

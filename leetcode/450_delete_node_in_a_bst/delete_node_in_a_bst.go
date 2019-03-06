@@ -1,8 +1,6 @@
 package leetcode450
 
-import (
-	"github.com/mlixytz/LeetCode-go/utils"
-)
+import "github.com/mlixytz/go-algorithm/leetcode/utils"
 
 type TreeNode = utils.TreeNode
 
@@ -21,8 +19,6 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 		return root.Right
 	} else if root.Right == nil {
 		return root.Left
-	} else {
-
 	}
 	m := min(root.Right)
 	m.Right = deleteMin(root.Right)
