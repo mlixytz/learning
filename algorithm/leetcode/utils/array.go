@@ -47,3 +47,16 @@ func IsArrayNumerEqual(a, b []int) bool {
 	}
 	return true
 }
+
+// IsStringArrayEqual 判断两个string array是否相等
+func IsStringArrayEqual(a, b []string) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := 0; i < len(a); i++ {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
