@@ -20,7 +20,7 @@ func CreateSingleLinkedList(nums []int) *SingleLinkedListNode {
 	return head
 }
 
-// TwoSingleLinkedListIsEqual 两个但链表相等
+// TwoSingleLinkedListIsEqual 两个单链表相等
 func TwoSingleLinkedListIsEqual(a, b *SingleLinkedListNode) bool {
 	for {
 		if (a.Next == nil && b.Next != nil) || (a.Next != nil && b.Next == nil) {
