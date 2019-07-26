@@ -1,3 +1,3 @@
-# go-algorithm
+# Learning-go
 
-golang语言学习。包括算法、数据结构、设计模式等
+Go language learning, includes common algorithm, data-structure, design-patterns
