@@ -51,7 +51,6 @@ func josephusPermutation1(n, s, k int) int {
 // It's time complexity is O(n)
 // f(n, k) = (f(n-1, k) + k) % n + 1
 func josephusPermutation2(n, k int) int {
-	// generate cirular linked list and find the start node
 	if n == 1 {
 		return 1
 	}
