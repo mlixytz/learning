@@ -1,3 +1,3 @@
 # Learning
 
-Learning go and java
+Go & java languages learning, including common algorithm, data-structure, design-patterns
