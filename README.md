@@ -1,3 +1,3 @@
 # Learning
 
-Learning algorithm, data-structure, design-patterns
+Learning algorithm data-structure design-patterns
