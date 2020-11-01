@@ -19,19 +19,16 @@ func reverseList(head *ListNode) *ListNode {
 	return prev
 }
 
-// 递归
+// 递归实现
 // func reverseList(head *ListNode) *ListNode {
-// 	if head == nil || head.Next == nil {
-// 		return head
-// 	}
 // 	return reverse(nil, head)
 // }
 
-// func reverse(prev, cur *ListNode) *ListNode {
+// func reverse(prev *ListNode, cur *ListNode) *ListNode{
+// 	if cur == nil {
+// 			return prev
+// 	}
 // 	next := cur.Next
 // 	cur.Next = prev
-// 	if next != nil {
-// 		return reverse(cur, next)
-// 	}
-// 	return cur
+// 	return reverse(cur, next)
 // }
