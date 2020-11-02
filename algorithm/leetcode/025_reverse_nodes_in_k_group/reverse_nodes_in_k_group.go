@@ -1,7 +1,7 @@
 package leetcode025
 
 import (
-	"github.com/mlixytz/learning-go/algorithm/leetcode/utils"
+	"github.com/mlixytz/learning/algorithm/leetcode/utils"
 )
 
 type ListNode = utils.SingleLinkedListNode

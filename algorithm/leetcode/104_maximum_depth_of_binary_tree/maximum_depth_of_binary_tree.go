@@ -1,7 +1,7 @@
 package leetcode014
 
 import (
-	"github.com/mlixytz/go-algorithm/leetcode/utils"
+	"github.com/mlixytz/learning/algorithm/leetcode/utils"
 )
 
 type TreeNode = utils.TreeNode

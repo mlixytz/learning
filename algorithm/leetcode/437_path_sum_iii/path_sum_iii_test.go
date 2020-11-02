@@ -1,4 +1,4 @@
-package leetcode017
+package leetcode437
 
 import (
 	"testing"
@@ -7,7 +7,7 @@ import (
 )
 
 func TestSolution(t *testing.T) {
-	if !utils.IsStringArrayEqual(letterCombinations("23"), []string{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}) {
+	if pathSum(utils.CreateTreeByArray([]int{10, 5, -3, 3, 2, utils.NULL, 11, 3, -2, utils.NULL, 1}), 8) != 3 {
 		t.Error("test error")
 	}
 }

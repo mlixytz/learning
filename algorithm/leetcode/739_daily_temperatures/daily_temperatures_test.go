@@ -3,7 +3,7 @@ package leetcode739
 import (
 	"testing"
 
-	"github.com/mlixytz/learning-go/algorithm/leetcode/utils"
+	"github.com/mlixytz/learning/algorithm/leetcode/utils"
 )
 
 func TestDailyTemperatures(t *testing.T) {
