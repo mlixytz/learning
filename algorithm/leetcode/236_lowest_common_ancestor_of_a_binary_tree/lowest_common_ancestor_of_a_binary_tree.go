@@ -1,7 +1,7 @@
 package leetcode236
 
 import (
-	"github.com/mlixytz/LeetCode-go/utils"
+	"github.com/mlixytz/learning/algorithm/leetcode/utils"
 )
 
 type TreeNode = utils.TreeNode
@@ -14,12 +14,9 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	right := lowestCommonAncestor(root.Right, p, q)
 	if left != nil && right != nil {
 		return root
-	} else if left == nil && right == nil {
-		return nil
-	} else {
-		if left == nil {
-			return right
-		}
-		return left
 	}
+	if left == nil {
+		return right
+	}
+	return left
 }
