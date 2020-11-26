@@ -1,4 +1,4 @@
-package leetcode046
+package leetcode045
 
 /* 思路：贪心算法， 每次找这一跳之后可以去的最远距离 */
 
