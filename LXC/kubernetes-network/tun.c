@@ -11,7 +11,7 @@
 int tun_alloc(int flags) {
     struct ifreq ifr;
     int fd, err;
-    char *clonedev = "/dev/net/tun"
+    char *clonedev = "/dev/net/tun";
 
     if ((fd = open(clonedev, O_RDWR)) < 0) {
         return fd;
@@ -34,7 +34,7 @@ int main() {
     int tun_fd, nread;
     char buffer[1500];
 
-    tun_fd = tun_alloc(IFF_TUN | IFF_NO_IP);
+    tun_fd = tun_alloc(IFF_TUN | IFF_NO_PI);
 
     if (tun_fd < 0) {
         perror("Allocating interface");
